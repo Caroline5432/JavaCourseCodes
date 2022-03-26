@@ -1,3 +1,7 @@
+package concurrency;
+
+import java.util.concurrent.Semaphore;
+
 /**
  * @ClassName Homework04
  * @Description
@@ -7,21 +11,26 @@
  * @Author Caroline
  * @Date 2022/3/25 18:08
  **/
-public class Homework04 {
+public class AysncRun10 {
 
-    public static void main(String[] args) {
+    private static final Semaphore semaphore = new Semaphore(0);
+
+    public static void main(String[] args) throws Exception {
 
         long start=System.currentTimeMillis();
 
         // 在这里创建一个线程或线程池，
-        // 异步执行 下面方法
+        SumThread sumThread = new SumThread();
+        sumThread.start();
 
-        int result = sum(); //这是得到的返回值
+        // Semaphore初始为0，在主线程中执行acquire，自然会被阻塞，等到计算线程执行完毕，执行release
+        semaphore.acquire();
 
+        int result = sumThread.getResult();
         // 确保  拿到result 并输出
         System.out.println("异步计算结果为："+result);
-
         System.out.println("使用时间："+ (System.currentTimeMillis()-start) + " ms");
+        System.out.println("Main Thread End!");
 
         // 然后退出main线程
     }
@@ -31,9 +40,25 @@ public class Homework04 {
     }
 
     private static int fibo(int a) {
-        if ( a < 2)
+        if (a < 2) {
             return 1;
+        }
         return fibo(a-1) + fibo(a-2);
+    }
+
+    static class SumThread extends Thread {
+
+        private Integer result;
+
+        public Integer getResult() {
+            return result;
+        }
+
+        @Override
+        public void run() {
+            result = sum();
+            semaphore.release();
+        }
     }
 
 }
