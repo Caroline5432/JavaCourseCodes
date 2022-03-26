@@ -1,7 +1,6 @@
 package concurrency;
 
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @ClassName Homework04
