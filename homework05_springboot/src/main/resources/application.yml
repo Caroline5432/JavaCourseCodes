@@ -1,0 +1,33 @@
+student:
+  id: 1
+  name: caroline
+  isopen: true
+
+klass:
+  students:
+    - id: 111
+      name: caroline111
+    - id: 222
+      name: caroline222
+
+school:
+  klasses:
+    students:
+      - id: 110
+        name: xiaoming
+      - id: 120
+        name: xiaotian
+  student:
+    - id: 220
+      name: haha
+
+# hikari
+driverClassName: com.mysql.jdbc.Driver
+jdbcUrl: jdbc:mysql://localhost:3306/mall?useSSL=false
+maximumPoolSize: 20
+username: root
+password: root
+dataSource:
+  cachePrepStmts: true
+  prepStmtCacheSize: 250
+  prepStmtCacheSqlLimit: 2048

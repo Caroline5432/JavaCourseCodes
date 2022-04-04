@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.github.starter.caroline.carospringbootstarter.config.StudentConfig,\
+com.github.starter.caroline.carospringbootstarter.config.KlassConfig,\
+com.github.starter.caroline.carospringbootstarter.config.SchoolConfig
