@@ -8,7 +8,7 @@ import javax.sql.DataSource;
 
 /**
  * 数据源获取，模拟简单的从库负载均衡
- * @author lw
+ * @author caroline
  */
 @Component
 public class ManagementCenter {

@@ -11,7 +11,7 @@ import javax.sql.DataSource;
 
 /**
  * 主从数据库配置：1主2从
- * @author lw
+ * @author caroline
  */
 @Configuration
 public class DataSourceConfig {

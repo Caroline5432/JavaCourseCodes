@@ -15,7 +15,7 @@ import java.util.Map;
 
 /**
  * 有点类似分支事务管理器 TM
- * @author lw
+ * @author caroline
  */
 @Service
 @Slf4j
