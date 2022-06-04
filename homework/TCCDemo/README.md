@@ -567,4 +567,4 @@ public class TccClientService {
 
 &ensp;&ensp;&ensp;&ensp;TC 和 TM 的通信方法也是可以用其他的，这里为了方便使用的HTTP，也可以使用 RPC之类的。
 
-&ensp;&ensp;&ensp;&ensp;完整的工程如下：[TCCDemo](https://github.com/lw1243925457/JAVA-000/tree/main/homework/TCCDemo)
+&ensp;&ensp;&ensp;&ensp;完整的工程如下：[TCCDemo](https://github.com//JAVA-000/tree/main/homework/TCCDemo)
